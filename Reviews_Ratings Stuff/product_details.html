@@ -1,0 +1,26 @@
+<!-- product_details.html -->
+<h1>{{ product.name }}</h1>
+<!-- Product details display -->
+
+<h2>Ratings</h2>
+{% if ratings %}
+  <p>Average Rating: {{ calculate_average_rating(ratings) }}</p>
+  <ul>
+    {% for rating in ratings %}
+      <li>{{ rating.value }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No ratings available.</p>
+{% endif %}
+
+<h2>Reviews</h2>
+{% if reviews %}
+  <ul>
+    {% for review in reviews %}
+      <li>{{ review.content }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No reviews available.</p>
+{% endif %}
