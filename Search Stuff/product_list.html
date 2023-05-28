@@ -7,3 +7,22 @@
 {% for product in products %}
   <!-- Product information display -->
 {% endfor %}
+
+<!-- product_list.html -->
+<form action="/" method="GET">
+  <!-- Search input field -->
+
+  <label for="filter1">
+    <input type="checkbox" id="filter1" name="filter" value="category1" {% if 'category1' in filters %}checked{% endif %}>
+    Category 1
+  </label>
+
+  <label for="filter2">
+    <input type="checkbox" id="filter2" name="filter" value="category2" {% if 'category2' in filters %}checked{% endif %}>
+    Category 2
+  </label>
+
+  <!-- Add more filter options as needed -->
+
+  <button type="submit">Search</button>
+</form>
