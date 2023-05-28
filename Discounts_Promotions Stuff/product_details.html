@@ -1,0 +1,7 @@
+<!-- product_details.html -->
+<h1>{{ product.name }}</h1>
+<!-- Product details display -->
+<p>Price: {{ product.price }}</p>
+{% if product.discount_price %}
+  <p>Discounted Price: {{ product.discount_price }}</p>
+{% endif %}
