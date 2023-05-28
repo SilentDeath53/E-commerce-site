@@ -1,0 +1,9 @@
+<!-- product_list.html -->
+<form action="/" method="GET">
+  <input type="text" name="search_query" value="{{ search_query }}" placeholder="Search...">
+  <button type="submit">Search</button>
+</form>
+
+{% for product in products %}
+  <!-- Product information display -->
+{% endfor %}
