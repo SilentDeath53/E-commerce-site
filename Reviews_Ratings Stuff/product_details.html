@@ -24,3 +24,22 @@
 {% else %}
   <p>No reviews available.</p>
 {% endif %}
+
+<!-- product_details.html -->
+<h2>Submit a Rating</h2>
+<form action="/product/{{ product.id }}/rate" method="POST">
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <button type="submit">Submit Rating</button>
+</form>
+
+<h2>Submit a Review</h2>
+<form action="/product/{{ product.id }}/review" method="POST">
+  <textarea name="review" rows="4" cols="50"></textarea>
+  <button type="submit">Submit Review</button>
+</form>
