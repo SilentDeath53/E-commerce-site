@@ -1,0 +1,9 @@
+<!-- product_list.html -->
+{% for product in products %}
+  <h2>{{ product.name }}</h2>
+  <p>Description: {{ product.description }}</p>
+  <p>Price: ${{ product.price }}</p>
+  <p>Inventory: {{ product.inventory }}</p>
+  <a href="{{ url_for('product_details', product_id=product.id) }}">View Details</a>
+  <hr>
+{% endfor %}
